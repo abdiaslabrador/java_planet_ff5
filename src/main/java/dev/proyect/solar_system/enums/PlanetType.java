@@ -1,8 +1,8 @@
 package dev.proyect.solar_system.enums;
 
 public enum PlanetType {
-    GASEOSO("Gaseoso"),
-    TERRESTRE("Terrestre"),
+    GASEOSO("GASEOSO"),
+    TERRESTRE("TERRESTRE"),
     ENANO("Enano");
     
     private final String planetTypeName; 

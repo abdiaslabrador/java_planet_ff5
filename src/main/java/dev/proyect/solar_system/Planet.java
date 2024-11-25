@@ -24,7 +24,13 @@ public class Planet {
         this.viewObserv = viewObserv;
     }
 
-    
+    public boolean isOuter(){
+        // mayor que 3.4 UA
+        if(this.sunDistance > 508632760){
+            return true;
+        }
+        return false;
+    }
 
     public String getName() {
         return name;
@@ -120,13 +126,15 @@ public class Planet {
         this.viewObserv = viewObserv;
     }
 
-
+    public double getDensity(){
+        return (this.massKlg/this.volumKm3);
+    }
 
     @Override
     public String toString() {
-        return "name=" + name + ", numbSatellite=" + numbSatellite + ", massKlg=" + massKlg + ", volumKm3="
-                + volumKm3 + ", diameterKm=" + diameterKm + ", sunDistance=" + sunDistance + ", planetType="
-                + planetType + ", viewObserv=" + viewObserv;
+        return "name: " + name + ", numbSatellite: " + numbSatellite + ", massKlg: " + massKlg + ", volumKm3: "
+                + volumKm3 + ", diameterKm: " + diameterKm + ", sunDistance: " + sunDistance + ", planetType: "
+                + planetType + ", viewObserv: " + viewObserv;
     }
 
     
