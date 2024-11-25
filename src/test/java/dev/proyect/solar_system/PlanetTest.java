@@ -146,4 +146,19 @@ public class PlanetTest {
         earth.setisObserv(newObserv);
         assertThat(newObserv, is( earth.isObserv()));
     }
+
+    @Test
+    void testGetYearsOrbitalPeriod() {
+        assertThat(yearsOrbitalPeriod, is( earth.getYearsOrbitalPeriod()));
+    }
+
+    @Test
+    @DisplayName("Test if the setYearsOrbitalPeriod function correctly assigns the new value")
+    void testSetYearsOrbitalPeriod() {
+        float newYearsOrbitalPeriod = 2f;
+        earth.setYearsOrbitalPeriod(newYearsOrbitalPeriod);
+        assertThat(newYearsOrbitalPeriod, is( earth.getYearsOrbitalPeriod()));
+    }
+
+
 }

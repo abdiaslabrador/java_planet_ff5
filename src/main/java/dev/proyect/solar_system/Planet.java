@@ -161,5 +161,9 @@ public class Planet {
                "\nIs outer: " + isOuter + "\nYears orbital period: " + yearsOrbitalPeriod + "\nDays orbital period: " + daysOrbitalPeriod;
     }
 
+    public void setObserv(boolean isObserv) {
+        this.isObserv = isObserv;
+    }
+
     
 }
