@@ -141,9 +141,9 @@ public class PlanetTest {
 
     @Test
     @DisplayName("Test if the setSunDistance function correctly assigns the new value")
-    void testSetisObserv() {
+    void testsetIsObserv() {
         boolean newObserv = true;
-        earth.setisObserv(newObserv);
+        earth.setIsObserv(newObserv);
         assertThat(newObserv, is( earth.isObserv()));
     }
 
