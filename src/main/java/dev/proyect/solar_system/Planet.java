@@ -10,10 +10,10 @@ public class Planet {
     private int diameterKm = 0;
     private int sunDistance = 0;
     private PlanetType planetType;
-    private boolean viewObserv = false;
+    private boolean isObserv = false;
 
     public Planet(String name, int numbSatellite, double massKlg, double volumKm3, int diameterKm, int sunDistance,
-            PlanetType planetType, boolean viewObserv) {
+            PlanetType planetType, boolean isObserv) {
         this.name = name;
         this.numbSatellite = numbSatellite;
         this.massKlg = massKlg;
@@ -21,7 +21,7 @@ public class Planet {
         this.diameterKm = diameterKm;
         this.sunDistance = sunDistance;
         this.planetType = planetType;
-        this.viewObserv = viewObserv;
+        this.isObserv = isObserv;
     }
 
     public boolean isOuter(){
@@ -116,14 +116,14 @@ public class Planet {
 
 
 
-    public boolean isViewObserv() {
-        return viewObserv;
+    public boolean isObserv() {
+        return isObserv;
     }
 
 
 
-    public void setViewObserv(boolean viewObserv) {
-        this.viewObserv = viewObserv;
+    public void setisObserv(boolean isObserv) {
+        this.isObserv = isObserv;
     }
 
     public double getDensity(){
@@ -132,9 +132,12 @@ public class Planet {
 
     @Override
     public String toString() {
-        return "name: " + name + ", numbSatellite: " + numbSatellite + ", massKlg: " + massKlg + ", volumKm3: "
-                + volumKm3 + ", diameterKm: " + diameterKm + ", sunDistance: " + sunDistance + ", planetType: "
-                + planetType + ", viewObserv: " + viewObserv;
+        String isOuter = isOuter() ? "si" : "no";
+        String isObserv = isObserv() ? "si" : "no";
+        
+        return "\nname: " + name + "\nNumber of Satellite: " + numbSatellite + "\nMass in Kilograms: " + massKlg + "\nvolumKm3: "
+                + volumKm3 + "\nDiameters (Km): " + diameterKm + "\nDistance from the sun: " + sunDistance + "\nPlanet type: "
+                + planetType.getPlanetType() + "\nIs Observable: " + isObserv + "\nDensity: " + this.getDensity() + "\nIs outer: " + isOuter;
     }
 
     
